@@ -72,7 +72,10 @@ button {
 .fine { font-size: 13px; color: var(--muted); }
 
 .race { margin: 28px 0; }
-.race h2 { font: 700 22px/1.2 Georgia, "Times New Roman", serif; margin: 0 0 6px; padding-top: 18px; border-top: 2px solid var(--ink); }
+.race { border-top: 2px solid var(--ink); padding-top: 14px; }
+.race-state { margin: 0 0 2px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.race h2 { font: 700 22px/1.2 Georgia, "Times New Roman", serif; margin: 0 0 6px; }
+.no-senate { margin: 28px 0 0; padding: 10px 14px; border: 1px dashed var(--line); border-radius: 8px; }
 .race-note { margin: 0 0 6px; color: var(--muted); font-size: 14px; }
 .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 12px; }
 @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }

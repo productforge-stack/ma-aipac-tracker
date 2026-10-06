@@ -1,102 +1,554 @@
 {
-  "_source": "Massachusetts Secretary of the Commonwealth, 2026 State Election Candidates: https://www.sec.state.ma.us/divisions/elections/research-and-statistics/2026-state-election-candidates.htm",
-  "_checked": "2026-10-06",
-  "_notes": [
-    "Party is the ballot designation as printed by the Secretary of the Commonwealth.",
-    "The official page lists Richard E. Neal with no designation; he won the Sept. 1, 2026 Democratic primary, so Democratic is used here.",
-    "fec_id is null when a candidate has no FEC registration (campaigns under $5,000 are not required to register)."
-  ],
   "election_date": "2026-11-03",
+  "_notes": [
+    "Only candidates printed on the November ballot are listed; declared write-ins are excluded.",
+    "Party is the ballot designation; cross-nominations are joined with ' / '.",
+    "fec_id is null when a candidate has no FEC registration (campaigns under $5,000 are not required to register).",
+    "MA: the official list shows Richard E. Neal with no designation; he won the Democratic primary, so Democratic is used.",
+    "VT has one at-large House seat, stored as district 0. CT and VT have no U.S. Senate race in 2026."
+  ],
+  "states": {
+    "MA": {
+      "name": "Massachusetts",
+      "checked": "2026-10-06",
+      "source": "https://www.sec.state.ma.us/divisions/elections/research-and-statistics/2026-state-election-candidates.htm",
+      "source_label": "Massachusetts Secretary of the Commonwealth"
+    },
+    "CT": {
+      "name": "Connecticut",
+      "checked": "2026-10-06",
+      "source": "https://ballotpedia.org/United_States_House_of_Representatives_elections_in_Connecticut,_2026",
+      "source_label": "Ballotpedia and The Green Papers (official CT list not machine-readable)"
+    },
+    "ME": {
+      "name": "Maine",
+      "checked": "2026-10-06",
+      "source": "https://www.maine.gov/sos/elections-voting/upcoming-elections",
+      "source_label": "Maine Secretary of State, 2026 General Candidate List (final)"
+    },
+    "NH": {
+      "name": "New Hampshire",
+      "checked": "2026-10-06",
+      "source": "https://www.sos.nh.gov/2026-election-details",
+      "source_label": "New Hampshire Secretary of State, candidate list dated 9/17/2026"
+    },
+    "RI": {
+      "name": "Rhode Island",
+      "checked": "2026-10-06",
+      "source": "https://vote.sos.ri.gov/Candidates/CandidateSearch",
+      "source_label": "Rhode Island Department of State"
+    },
+    "VT": {
+      "name": "Vermont",
+      "checked": "2026-10-06",
+      "source": "https://sos.vermont.gov/elections/election-info-resources/candidates",
+      "source_label": "Vermont Secretary of State, list updated 9/23/2026"
+    }
+  },
   "races": [
     {
+      "state": "MA",
       "office": "S",
       "district": null,
-      "title": "U.S. Senate",
       "candidates": [
-        { "name": "Edward J. Markey", "party": "Democratic", "fec_id": "S4MA00028", "incumbent": true },
-        { "name": "John Deaton", "party": "Republican", "fec_id": "S6MA00304" },
-        { "name": "Shiva Ayyadurai", "party": "Independent", "fec_id": "S8MA00268" },
-        { "name": "Joe Tache", "party": "Socialism and Liberation", "fec_id": "S6MA00288" }
+        {
+          "name": "Edward J. Markey",
+          "party": "Democratic",
+          "fec_id": "S4MA00028",
+          "incumbent": true
+        },
+        {
+          "name": "John Deaton",
+          "party": "Republican",
+          "fec_id": "S6MA00304"
+        },
+        {
+          "name": "Shiva Ayyadurai",
+          "party": "Independent",
+          "fec_id": "S8MA00268"
+        },
+        {
+          "name": "Joe Tache",
+          "party": "Socialism and Liberation",
+          "fec_id": "S6MA00288"
+        }
       ]
     },
     {
+      "state": "MA",
       "office": "H",
       "district": 1,
-      "title": "U.S. House, 1st District",
       "candidates": [
-        { "name": "Richard E. Neal", "party": "Democratic", "fec_id": "H8MA02041", "incumbent": true },
-        { "name": "Nadia Donya Milleron", "party": "Independent/Unenrolled", "fec_id": "H4MA01091" }
+        {
+          "name": "Richard E. Neal",
+          "party": "Democratic",
+          "fec_id": "H8MA02041",
+          "incumbent": true
+        },
+        {
+          "name": "Nadia Donya Milleron",
+          "party": "Independent/Unenrolled",
+          "fec_id": "H4MA01091"
+        }
       ]
     },
     {
+      "state": "MA",
       "office": "H",
       "district": 2,
-      "title": "U.S. House, 2nd District",
       "candidates": [
-        { "name": "James P. McGovern", "party": "Democratic", "fec_id": "H4MA03022", "incumbent": true }
+        {
+          "name": "James P. McGovern",
+          "party": "Democratic",
+          "fec_id": "H4MA03022",
+          "incumbent": true
+        }
       ]
     },
     {
+      "state": "MA",
       "office": "H",
       "district": 3,
-      "title": "U.S. House, 3rd District",
       "candidates": [
-        { "name": "Lori Loureiro Trahan", "party": "Democratic", "fec_id": "H8MA03106", "incumbent": true },
-        { "name": "Gary J. Grossi", "party": "Republican", "fec_id": "H6MA03100" },
-        { "name": "Dennis R. Conlon", "party": "Unenrolled", "fec_id": null }
+        {
+          "name": "Lori Loureiro Trahan",
+          "party": "Democratic",
+          "fec_id": "H8MA03106",
+          "incumbent": true
+        },
+        {
+          "name": "Gary J. Grossi",
+          "party": "Republican",
+          "fec_id": "H6MA03100"
+        },
+        {
+          "name": "Dennis R. Conlon",
+          "party": "Unenrolled",
+          "fec_id": null
+        }
       ]
     },
     {
+      "state": "MA",
       "office": "H",
       "district": 4,
-      "title": "U.S. House, 4th District",
       "candidates": [
-        { "name": "Jake Auchincloss", "party": "Democratic", "fec_id": "H0MA04192", "incumbent": true },
-        { "name": "Thomas Stalcup", "party": "Republican", "fec_id": "H6MA04140" }
+        {
+          "name": "Jake Auchincloss",
+          "party": "Democratic",
+          "fec_id": "H0MA04192",
+          "incumbent": true
+        },
+        {
+          "name": "Thomas Stalcup",
+          "party": "Republican",
+          "fec_id": "H6MA04140"
+        }
       ]
     },
     {
+      "state": "MA",
       "office": "H",
       "district": 5,
-      "title": "U.S. House, 5th District",
       "candidates": [
-        { "name": "Katherine M. Clark", "party": "Democratic", "fec_id": "H4MA05084", "incumbent": true }
+        {
+          "name": "Katherine M. Clark",
+          "party": "Democratic",
+          "fec_id": "H4MA05084",
+          "incumbent": true
+        }
       ]
     },
     {
+      "state": "MA",
       "office": "H",
       "district": 6,
-      "title": "U.S. House, 6th District",
       "candidates": [
-        { "name": "Dan Koh", "party": "Democratic", "fec_id": "H8MA03072" },
-        { "name": "Micah Quinney Jones", "party": "Republican", "fec_id": "H6MA06202" }
+        {
+          "name": "Dan Koh",
+          "party": "Democratic",
+          "fec_id": "H8MA03072"
+        },
+        {
+          "name": "Micah Quinney Jones",
+          "party": "Republican",
+          "fec_id": "H6MA06202"
+        }
       ]
     },
     {
+      "state": "MA",
       "office": "H",
       "district": 7,
-      "title": "U.S. House, 7th District",
       "candidates": [
-        { "name": "Ayanna S. Pressley", "party": "Democratic", "fec_id": "H8MA07032", "incumbent": true }
+        {
+          "name": "Ayanna S. Pressley",
+          "party": "Democratic",
+          "fec_id": "H8MA07032",
+          "incumbent": true
+        }
       ]
     },
     {
+      "state": "MA",
       "office": "H",
       "district": 8,
-      "title": "U.S. House, 8th District",
       "candidates": [
-        { "name": "Stephen F. Lynch", "party": "Democratic", "fec_id": "H2MA09072", "incumbent": true },
-        { "name": "Robert G. Burke", "party": "Republican", "fec_id": "H2MA08090" },
-        { "name": "Rasheed Nicholas Walters", "party": "Independent", "fec_id": "H6MA08372" }
+        {
+          "name": "Stephen F. Lynch",
+          "party": "Democratic",
+          "fec_id": "H2MA09072",
+          "incumbent": true
+        },
+        {
+          "name": "Robert G. Burke",
+          "party": "Republican",
+          "fec_id": "H2MA08090"
+        },
+        {
+          "name": "Rasheed Nicholas Walters",
+          "party": "Independent",
+          "fec_id": "H6MA08372"
+        }
       ]
     },
     {
+      "state": "MA",
       "office": "H",
       "district": 9,
-      "title": "U.S. House, 9th District",
       "candidates": [
-        { "name": "Bill Keating", "party": "Democratic", "fec_id": "H0MA10082", "incumbent": true },
-        { "name": "R. Tyler MacAllister", "party": "Republican", "fec_id": "H6MA09206" }
+        {
+          "name": "Bill Keating",
+          "party": "Democratic",
+          "fec_id": "H0MA10082",
+          "incumbent": true
+        },
+        {
+          "name": "R. Tyler MacAllister",
+          "party": "Republican",
+          "fec_id": "H6MA09206"
+        }
+      ]
+    },
+    {
+      "state": "CT",
+      "office": "H",
+      "district": 1,
+      "candidates": [
+        {
+          "name": "Luke Bronin",
+          "party": "Democratic",
+          "fec_id": "H6CT01206"
+        },
+        {
+          "name": "Amy Chai",
+          "party": "Republican",
+          "fec_id": "H2CT03102"
+        },
+        {
+          "name": "Mary L. Sanders",
+          "party": "Green",
+          "fec_id": "H2CT01239"
+        }
+      ]
+    },
+    {
+      "state": "CT",
+      "office": "H",
+      "district": 2,
+      "candidates": [
+        {
+          "name": "Joe Courtney",
+          "party": "Democratic",
+          "fec_id": "H2CT02112",
+          "incumbent": true
+        },
+        {
+          "name": "George Austin",
+          "party": "Republican / Independent Party",
+          "fec_id": "H6CT02196"
+        }
+      ]
+    },
+    {
+      "state": "CT",
+      "office": "H",
+      "district": 3,
+      "candidates": [
+        {
+          "name": "Rosa L. DeLauro",
+          "party": "Democratic",
+          "fec_id": "H0CT03072",
+          "incumbent": true
+        },
+        {
+          "name": "Christopher Lancia",
+          "party": "Republican",
+          "fec_id": "H6CT03178"
+        },
+        {
+          "name": "Thomas Egan",
+          "party": "Independent Party",
+          "fec_id": null
+        }
+      ]
+    },
+    {
+      "state": "CT",
+      "office": "H",
+      "district": 4,
+      "candidates": [
+        {
+          "name": "Jim Himes",
+          "party": "Democratic",
+          "fec_id": "H8CT04172",
+          "incumbent": true
+        },
+        {
+          "name": "Michael Goldstein",
+          "party": "Republican",
+          "fec_id": "H6CT04143"
+        },
+        {
+          "name": "Benjamin Wesley",
+          "party": "Independent Party",
+          "fec_id": "H4CT04197"
+        }
+      ]
+    },
+    {
+      "state": "CT",
+      "office": "H",
+      "district": 5,
+      "candidates": [
+        {
+          "name": "Jahana Hayes",
+          "party": "Democratic / Working Families",
+          "fec_id": "H8CT05245",
+          "incumbent": true
+        },
+        {
+          "name": "Chris Shea",
+          "party": "Republican",
+          "fec_id": "H6CT05231"
+        }
+      ]
+    },
+    {
+      "state": "ME",
+      "office": "S",
+      "district": null,
+      "candidates": [
+        {
+          "name": "Susan M. Collins",
+          "party": "Republican",
+          "fec_id": "S6ME00159",
+          "incumbent": true
+        },
+        {
+          "name": "Troy D. Jackson",
+          "party": "Democratic",
+          "fec_id": "S6ME00464"
+        }
+      ]
+    },
+    {
+      "state": "ME",
+      "office": "H",
+      "district": 1,
+      "candidates": [
+        {
+          "name": "Chellie Pingree",
+          "party": "Democratic",
+          "fec_id": "H8ME01120",
+          "incumbent": true
+        },
+        {
+          "name": "Ronald C. Russell",
+          "party": "Republican",
+          "fec_id": "H4ME01160"
+        }
+      ]
+    },
+    {
+      "state": "ME",
+      "office": "H",
+      "district": 2,
+      "candidates": [
+        {
+          "name": "Matthew G. Dunlap",
+          "party": "Democratic",
+          "fec_id": "H6ME02171"
+        },
+        {
+          "name": "Paul R. LePage",
+          "party": "Republican",
+          "fec_id": "H6ME02148"
+        }
+      ]
+    },
+    {
+      "state": "NH",
+      "office": "S",
+      "district": null,
+      "candidates": [
+        {
+          "name": "Chris Pappas",
+          "party": "Democratic",
+          "fec_id": "S6NH00141"
+        },
+        {
+          "name": "John E. Sununu",
+          "party": "Republican",
+          "fec_id": "S6NH00208"
+        },
+        {
+          "name": "Edmond Laplante",
+          "party": "Constitution",
+          "fec_id": "S2NH00223"
+        }
+      ]
+    },
+    {
+      "state": "NH",
+      "office": "H",
+      "district": 1,
+      "candidates": [
+        {
+          "name": "Stefany Shaheen",
+          "party": "Democratic",
+          "fec_id": "H6NH01321"
+        },
+        {
+          "name": "Anthony DiLorenzo",
+          "party": "Republican",
+          "fec_id": "H6NH01420"
+        }
+      ]
+    },
+    {
+      "state": "NH",
+      "office": "H",
+      "district": 2,
+      "candidates": [
+        {
+          "name": "Maggie Goodlander",
+          "party": "Democratic",
+          "fec_id": "H4NH02399",
+          "incumbent": true
+        },
+        {
+          "name": "Lily Tang Williams",
+          "party": "Republican",
+          "fec_id": "H2NH02260"
+        },
+        {
+          "name": "Robbie Mahrou",
+          "party": "Independent",
+          "fec_id": "H6NH02303"
+        }
+      ]
+    },
+    {
+      "state": "RI",
+      "office": "S",
+      "district": null,
+      "candidates": [
+        {
+          "name": "John Francis Reed",
+          "party": "Democratic",
+          "fec_id": "S6RI00163",
+          "incumbent": true
+        },
+        {
+          "name": "Raymond T. McKay",
+          "party": "Republican",
+          "fec_id": "S4RI00051"
+        },
+        {
+          "name": "Michael Anthony Bahry",
+          "party": "Independent",
+          "fec_id": "S6RI00288"
+        }
+      ]
+    },
+    {
+      "state": "RI",
+      "office": "H",
+      "district": 1,
+      "candidates": [
+        {
+          "name": "Gabriel Felix Kofi Amo",
+          "party": "Democratic",
+          "fec_id": "H4RI01265",
+          "incumbent": true
+        },
+        {
+          "name": "Kellie Eleanor Keenan",
+          "party": "Republican",
+          "fec_id": "H6RI01153"
+        },
+        {
+          "name": "Pedro Junior Soares De Souza",
+          "party": "Independent",
+          "fec_id": "H6RI01161"
+        }
+      ]
+    },
+    {
+      "state": "RI",
+      "office": "H",
+      "district": 2,
+      "candidates": [
+        {
+          "name": "Seth Michael Magaziner",
+          "party": "Democratic",
+          "fec_id": "H2RI02184",
+          "incumbent": true
+        },
+        {
+          "name": "Victor Gilbert Mellor",
+          "party": "Republican",
+          "fec_id": "H6RI02318"
+        }
+      ]
+    },
+    {
+      "state": "VT",
+      "office": "H",
+      "district": 0,
+      "candidates": [
+        {
+          "name": "Becca Balint",
+          "party": "Democratic",
+          "fec_id": "H2VT01076",
+          "incumbent": true
+        },
+        {
+          "name": "Gerald Malloy",
+          "party": "Republican",
+          "fec_id": "H6VT01085"
+        },
+        {
+          "name": "Phoenix K. Altair",
+          "party": "Independent",
+          "fec_id": null
+        },
+        {
+          "name": "Adam Ortiz",
+          "party": "Independent",
+          "fec_id": "H2VT00177"
+        },
+        {
+          "name": "Suzanne \"Suz\" Seymour",
+          "party": "Independent",
+          "fec_id": "H6VT00269"
+        },
+        {
+          "name": "Ryan P. Walton",
+          "party": "Independent",
+          "fec_id": "H6VT01093"
+        }
       ]
     }
   ]

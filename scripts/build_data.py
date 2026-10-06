@@ -102,6 +102,16 @@ def fec_search_link(path, params):
     return f"https://www.fec.gov/data/{path}/?" + urllib.parse.urlencode(params, doseq=True)
 
 
+def race_title(race):
+    if race["office"] == "S":
+        return "U.S. Senate"
+    d = race["district"]
+    if d == 0:
+        return "U.S. House, At-Large"
+    suffix = "th" if 10 <= d % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(d % 10, "th")
+    return f"U.S. House, {d}{suffix} District"
+
+
 def main():
     ballot = json.loads(BALLOT_FILE.read_text(encoding="utf-8"))
     fec_ids = [c["fec_id"] for r in ballot["races"] for c in r["candidates"] if c["fec_id"]]
@@ -194,13 +204,19 @@ def main():
                     "fec_url": f"https://www.fec.gov/data/candidate/{fid}/",
                 })
             cands_out.append(entry)
-        races_out.append({**{k: race[k] for k in ("office", "district", "title")}, "candidates": cands_out})
+        races_out.append({
+            "state": race["state"],
+            "office": race["office"],
+            "district": race["district"],
+            "title": race_title(race),
+            "candidates": cands_out,
+        })
 
     out = {
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "election_date": ballot["election_date"],
         "cycles": CYCLES,
-        "ballot_source": ballot["_source"],
+        "states": ballot["states"],
         "races": races_out,
     }
     text = json.dumps(out, indent=1)

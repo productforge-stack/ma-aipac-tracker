@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://geocoding.geo.census.gov; connect-src 'self'; img-src 'self' data:; style-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
-<title>MA Candidates &amp; AIPAC Money</title>
-<meta name="description" content="Look up your 2026 Massachusetts congressional and Senate candidates and see which have received money from AIPAC's PAC, based on FEC filings.">
+<title>New England AIPAC Money</title>
+<meta name="description" content="Look up your 2026 New England congressional and Senate candidates and see which have received money from AIPAC's PAC, based on FEC filings.">
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="style.css">
 <script src="app.js" defer></script>
@@ -14,7 +14,7 @@
 <body>
 <header class="masthead">
   <div class="wrap">
-    <p class="eyebrow">Massachusetts · General Election · November 3, 2026</p>
+    <p class="eyebrow">CT · ME · MA · NH · RI · VT — General Election, November 3, 2026</p>
     <h1>Who on your ballot has taken AIPAC money?</h1>
     <p class="lede">Enter your ZIP code to see your U.S. House and U.S. Senate candidates, their party, and whether federal filings show money from AIPAC's political action committee.</p>
   </div>
@@ -34,7 +34,7 @@
       <form id="address-form" class="search-row" novalidate>
         <label for="address">Street address</label>
         <div class="field">
-          <input id="address" name="address" autocomplete="street-address" placeholder="123 Main St, Worcester, MA 01608" required>
+          <input id="address" name="address" autocomplete="street-address" placeholder="123 Main St, Portland, ME 04101" required>
           <button type="submit">Find district</button>
         </div>
         <p class="fine">Your address is sent only to the U.S. Census Bureau's geocoder to find your district. This site does not store it.</p>
@@ -55,13 +55,13 @@
       <dt>Super PAC spending</dt>
       <dd>Ads and other spending by United Democracy Project (C00799031), AIPAC's super PAC. This money is spent <em>for or against</em> a candidate. It is not given to the candidate, so it is shown separately and does not count toward the AIPAC PAC total.</dd>
     </dl>
-    <p>Figures cover the 2022, 2024 and 2026 election cycles, since AIPAC PAC began in late 2021. "No AIPAC PAC money found" means none appears in FEC filings processed as of the date shown. Recent money may not be reported yet. A candidate with no FEC registration raised too little to have to file. Every total links to the underlying FEC records so you can check it yourself.</p>
+    <p>Figures cover the 2022, 2024 and 2026 election cycles, since AIPAC PAC began in late 2021. "No AIPAC PAC money found" means none appears in FEC filings processed as of the date shown. Recent money may not be reported yet. A candidate with no FEC registration raised too little to have to file. Only candidates printed on the ballot are shown, not write-ins. Every total links to the underlying FEC records so you can check it yourself.</p>
     <p id="sources" class="fine"></p>
   </section>
 </main>
 
 <footer class="wrap fine">
-  Independent project, not affiliated with any candidate, party or committee. Data: Federal Election Commission, U.S. Census Bureau, Massachusetts Secretary of the Commonwealth.
+  Independent project, not affiliated with any candidate, party or committee. Data: Federal Election Commission, U.S. Census Bureau, and the six states' election offices.
 </footer>
 </body>
 </html>

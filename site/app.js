@@ -1,7 +1,7 @@
 "use strict";
 
 const GEOCODER = "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress";
-const MA_FIPS = "25";
+const STATE_FIPS = { "09": "CT", "23": "ME", "25": "MA", "33": "NH", "44": "RI", "50": "VT" };
 
 let data = null;   // candidates.json
 let zips = null;   // zips.json
@@ -43,11 +43,8 @@ async function loadData() {
   data = c;
   zips = z;
   const updated = new Date(data.generated_at).toLocaleDateString("en-US", { dateStyle: "long" });
-  $("sources").replaceChildren(
-    `FEC data last refreshed ${updated}. Ballot: `,
-    link(data.ballot_source.split(": ").pop(), "Massachusetts Secretary of the Commonwealth"),
-    "."
-  );
+  const ballots = Object.values(data.states).flatMap((st, i) => [i ? "; " : "", `${st.name}: `, link(st.source, st.source_label)]);
+  $("sources").replaceChildren(`FEC data last refreshed ${updated}. Candidate lists — `, ...ballots, ".");
 }
 
 function partyClass(party) {
@@ -113,6 +110,7 @@ function raceSection(race, note) {
       list.length ? list.map(candidateCard) : el("p", { class: "empty" }, "None on this ballot.")
     );
   return el("section", { class: "race" },
+    el("p", { class: "race-state" }, data.states[race.state].name),
     el("h2", {}, race.title),
     note && el("p", { class: "race-note" }, note),
     race.candidates.length === 1 && el("p", { class: "race-note" }, "Only one candidate is on the ballot for this seat."),
@@ -123,31 +121,40 @@ function raceSection(race, note) {
   );
 }
 
-function showDistricts(districts, how) {
-  const races = data.races;
-  const senate = races.find((r) => r.office === "S");
-  const house = districts.map((d) => races.find((r) => r.office === "H" && r.district === d)).filter(Boolean);
-  const split = house.length > 1;
+function districtName(state, district) {
+  const race = data.races.find((r) => r.state === state && r.office === "H" && r.district === district);
+  return `${data.states[state].name}'s ${race ? race.title.replace("U.S. House, ", "") : `district ${district}`}`.replace("At-Large", "at-large district");
+}
+
+// pairs: [["MA", 7], ["MA", 5]] — one or more [state, district] the voter may be in.
+function showDistricts(pairs, how) {
+  const split = pairs.length > 1;
+  const states = [...new Set(pairs.map(([st]) => st))];
   const out = [];
-  out.push(raceSection(senate, "Every Massachusetts voter votes in this race."));
-  for (const r of house) {
-    out.push(raceSection(r, split ? "Your ZIP code is split between districts. Use the address search above to confirm which one is yours." : null));
+  for (const st of states) {
+    const name = data.states[st].name;
+    const senate = data.races.find((r) => r.state === st && r.office === "S");
+    if (senate) out.push(raceSection(senate, `Every ${name} voter votes in this race.`));
+    else out.push(el("p", { class: "race-note no-senate" }, `${name} has no U.S. Senate race on the 2026 ballot.`));
+    for (const [, d] of pairs.filter(([s]) => s === st)) {
+      const house = data.races.find((r) => r.state === st && r.office === "H" && r.district === d);
+      if (house) out.push(raceSection(house, split ? "Your ZIP code is split between districts. Use the address search above to confirm which one is yours." : null));
+    }
   }
   $("results").replaceChildren(...out);
-  const names = house.map((r) => r.title.replace("U.S. House, ", "")).join(" and the ");
-  setStatus(`${how} ${names}.`);
+  setStatus(`${how} ${pairs.map(([st, d]) => districtName(st, d)).join(" and ")}.`);
   if (split) $("address-box").open = true;
 }
 
 function lookupZip(zip) {
   if (!/^\d{5}$/.test(zip)) return setStatus("Please enter a 5-digit ZIP code.", true);
   const districts = zips[zip];
-  if (!/^(01|02|055)/.test(zip)) return setStatus(`${zip} isn't a Massachusetts ZIP code.`, true);
+  if (!/^0[1-6]/.test(zip)) return setStatus(`${zip} isn't a New England ZIP code. This site covers CT, MA, ME, NH, RI and VT.`, true);
   if (!districts) {
     $("address-box").open = true;
-    return setStatus(`We couldn't match ${zip} to a Massachusetts district (it may be a PO box or business ZIP). Try your street address instead.`, true);
+    return setStatus(`We couldn't match ${zip} to a congressional district (it may be a PO box or business ZIP). Try your street address instead.`, true);
   }
-  showDistricts(districts, districts.length > 1 ? `ZIP ${zip} covers parts of the` : `ZIP ${zip} is in the`);
+  showDistricts(districts, districts.length > 1 ? `ZIP ${zip} covers parts of` : `ZIP ${zip} is in`);
   history.replaceState(null, "", `?zip=${zip}`);
 }
 
@@ -187,8 +194,10 @@ async function lookupAddress(address) {
   if (!match) return setStatus("No match found. Check the street number and spelling, and include the city or ZIP.", true);
   const layer = Object.entries(match.geographies || {}).find(([k]) => /Congressional Districts/i.test(k));
   const cd = layer && layer[1][0];
-  if (!cd || cd.STATE !== MA_FIPS) return setStatus(`That address (${match.matchedAddress}) isn't in Massachusetts.`, true);
-  showDistricts([parseInt(cd.BASENAME, 10)], `${match.matchedAddress} is in the`);
+  const state = cd && STATE_FIPS[cd.STATE];
+  if (!state) return setStatus(`That address (${match.matchedAddress}) isn't in New England.`, true);
+  const cdKey = Object.keys(cd).find((k) => /^CD\d+$/.test(k));  // e.g. CD120: "07"; "00" = at-large
+  showDistricts([[state, parseInt(cd[cdKey], 10)]], `${match.matchedAddress} is in`);
   history.replaceState(null, "", location.pathname);  // never keep the address in the URL
 }
 
