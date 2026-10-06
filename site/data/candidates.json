@@ -1,0 +1,538 @@
+{
+ "generated_at": "2026-10-06T18:23:06Z",
+ "election_date": "2026-11-03",
+ "cycles": [
+  2022,
+  2024,
+  2026
+ ],
+ "ballot_source": "Massachusetts Secretary of the Commonwealth, 2026 State Election Candidates: https://www.sec.state.ma.us/divisions/elections/research-and-statistics/2026-state-election-candidates.htm",
+ "races": [
+  {
+   "office": "S",
+   "district": null,
+   "title": "U.S. Senate",
+   "candidates": [
+    {
+     "name": "Edward J. Markey",
+     "party": "Democratic",
+     "incumbent": true,
+     "fec_id": "S4MA00028",
+     "aipac_pac": {
+      "direct": 0,
+      "earmarked": 0,
+      "total": 0,
+      "by_cycle": {},
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00175059&recipient_committee_id=C00196774&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=S4MA00028"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/S4MA00028/"
+    },
+    {
+     "name": "John Deaton",
+     "party": "Republican",
+     "incumbent": false,
+     "fec_id": "S6MA00304",
+     "aipac_pac": {
+      "direct": 0,
+      "earmarked": 0,
+      "total": 0,
+      "by_cycle": {},
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00926139&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=S6MA00304"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/S6MA00304/"
+    },
+    {
+     "name": "Shiva Ayyadurai",
+     "party": "Independent",
+     "incumbent": false,
+     "fec_id": "S8MA00268",
+     "aipac_pac": {
+      "direct": 0,
+      "earmarked": 0,
+      "total": 0,
+      "by_cycle": {},
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00936542&recipient_committee_id=C00638148&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=S8MA00268"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/S8MA00268/"
+    },
+    {
+     "name": "Joe Tache",
+     "party": "Socialism and Liberation",
+     "incumbent": false,
+     "fec_id": "S6MA00288",
+     "aipac_pac": {
+      "direct": 0,
+      "earmarked": 0,
+      "total": 0,
+      "by_cycle": {},
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00920793&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=S6MA00288"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/S6MA00288/"
+    }
+   ]
+  },
+  {
+   "office": "H",
+   "district": 1,
+   "title": "U.S. House, 1st District",
+   "candidates": [
+    {
+     "name": "Richard E. Neal",
+     "party": "Democratic",
+     "incumbent": true,
+     "fec_id": "H8MA02041",
+     "aipac_pac": {
+      "direct": 20000.0,
+      "earmarked": 66303.74,
+      "total": 86303.74,
+      "by_cycle": {
+       "2022": {
+        "direct": 10000.0,
+        "earmarked": 37000.0,
+        "count": 34
+       },
+       "2024": {
+        "direct": 10000.0,
+        "earmarked": 27778.93,
+        "count": 41
+       },
+       "2026": {
+        "direct": 0.0,
+        "earmarked": 1524.81,
+        "count": 26
+       }
+      },
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00226522&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=H8MA02041"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/H8MA02041/"
+    },
+    {
+     "name": "Nadia Donya Milleron",
+     "party": "Independent/Unenrolled",
+     "incumbent": false,
+     "fec_id": "H4MA01091",
+     "aipac_pac": {
+      "direct": 0,
+      "earmarked": 0,
+      "total": 0,
+      "by_cycle": {},
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00868927&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=H4MA01091"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/H4MA01091/"
+    }
+   ]
+  },
+  {
+   "office": "H",
+   "district": 2,
+   "title": "U.S. House, 2nd District",
+   "candidates": [
+    {
+     "name": "James P. McGovern",
+     "party": "Democratic",
+     "incumbent": true,
+     "fec_id": "H4MA03022",
+     "aipac_pac": {
+      "direct": 0,
+      "earmarked": 0,
+      "total": 0,
+      "by_cycle": {},
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00285171&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=H4MA03022"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/H4MA03022/"
+    }
+   ]
+  },
+  {
+   "office": "H",
+   "district": 3,
+   "title": "U.S. House, 3rd District",
+   "candidates": [
+    {
+     "name": "Lori Loureiro Trahan",
+     "party": "Democratic",
+     "incumbent": true,
+     "fec_id": "H8MA03106",
+     "aipac_pac": {
+      "direct": 10000.0,
+      "earmarked": 0.0,
+      "total": 10000.0,
+      "by_cycle": {
+       "2022": {
+        "direct": 10000.0,
+        "earmarked": 0.0,
+        "count": 3
+       }
+      },
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00655647&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=H8MA03106"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/H8MA03106/"
+    },
+    {
+     "name": "Gary J. Grossi",
+     "party": "Republican",
+     "incumbent": false,
+     "fec_id": "H6MA03100",
+     "aipac_pac": {
+      "direct": 0,
+      "earmarked": 0,
+      "total": 0,
+      "by_cycle": {},
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00941054&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=H6MA03100"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/H6MA03100/"
+    },
+    {
+     "name": "Dennis R. Conlon",
+     "party": "Unenrolled",
+     "incumbent": false,
+     "fec_id": null
+    }
+   ]
+  },
+  {
+   "office": "H",
+   "district": 4,
+   "title": "U.S. House, 4th District",
+   "candidates": [
+    {
+     "name": "Jake Auchincloss",
+     "party": "Democratic",
+     "incumbent": true,
+     "fec_id": "H0MA04192",
+     "aipac_pac": {
+      "direct": 30000.0,
+      "earmarked": 956715.62,
+      "total": 986715.62,
+      "by_cycle": {
+       "2022": {
+        "direct": 10000.0,
+        "earmarked": 94391.0,
+        "count": 90
+       },
+       "2024": {
+        "direct": 10000.0,
+        "earmarked": 436359.47,
+        "count": 366
+       },
+       "2026": {
+        "direct": 10000.0,
+        "earmarked": 425965.15,
+        "count": 338
+       }
+      },
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00721431&recipient_committee_id=C00721449&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=H0MA04192"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/H0MA04192/"
+    },
+    {
+     "name": "Thomas Stalcup",
+     "party": "Republican",
+     "incumbent": false,
+     "fec_id": "H6MA04140",
+     "aipac_pac": {
+      "direct": 0,
+      "earmarked": 0,
+      "total": 0,
+      "by_cycle": {},
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00945477&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=H6MA04140"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/H6MA04140/"
+    }
+   ]
+  },
+  {
+   "office": "H",
+   "district": 5,
+   "title": "U.S. House, 5th District",
+   "candidates": [
+    {
+     "name": "Katherine M. Clark",
+     "party": "Democratic",
+     "incumbent": true,
+     "fec_id": "H4MA05084",
+     "aipac_pac": {
+      "direct": 30000.0,
+      "earmarked": 680770.3,
+      "total": 710770.3,
+      "by_cycle": {
+       "2022": {
+        "direct": 10000.0,
+        "earmarked": 35158.33,
+        "count": 34
+       },
+       "2024": {
+        "direct": 10000.0,
+        "earmarked": 394306.65,
+        "count": 322
+       },
+       "2026": {
+        "direct": 10000.0,
+        "earmarked": 251305.32,
+        "count": 247
+       }
+      },
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00541888&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=H4MA05084"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/H4MA05084/"
+    }
+   ]
+  },
+  {
+   "office": "H",
+   "district": 6,
+   "title": "U.S. House, 6th District",
+   "candidates": [
+    {
+     "name": "Dan Koh",
+     "party": "Democratic",
+     "incumbent": false,
+     "fec_id": "H8MA03072",
+     "aipac_pac": {
+      "direct": 0,
+      "earmarked": 0,
+      "total": 0,
+      "by_cycle": {},
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00654509&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=H8MA03072"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/H8MA03072/"
+    },
+    {
+     "name": "Micah Quinney Jones",
+     "party": "Republican",
+     "incumbent": false,
+     "fec_id": "H6MA06202",
+     "aipac_pac": {
+      "direct": 0,
+      "earmarked": 0,
+      "total": 0,
+      "by_cycle": {},
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00937755&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=H6MA06202"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/H6MA06202/"
+    }
+   ]
+  },
+  {
+   "office": "H",
+   "district": 7,
+   "title": "U.S. House, 7th District",
+   "candidates": [
+    {
+     "name": "Ayanna S. Pressley",
+     "party": "Democratic",
+     "incumbent": true,
+     "fec_id": "H8MA07032",
+     "aipac_pac": {
+      "direct": 0,
+      "earmarked": 0,
+      "total": 0,
+      "by_cycle": {},
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00667741&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=H8MA07032"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/H8MA07032/"
+    }
+   ]
+  },
+  {
+   "office": "H",
+   "district": 8,
+   "title": "U.S. House, 8th District",
+   "candidates": [
+    {
+     "name": "Stephen F. Lynch",
+     "party": "Democratic",
+     "incumbent": true,
+     "fec_id": "H2MA09072",
+     "aipac_pac": {
+      "direct": 0,
+      "earmarked": 0,
+      "total": 0,
+      "by_cycle": {},
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00366948&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=H2MA09072"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/H2MA09072/"
+    },
+    {
+     "name": "Robert G. Burke",
+     "party": "Republican",
+     "incumbent": false,
+     "fec_id": "H2MA08090",
+     "aipac_pac": {
+      "direct": 0,
+      "earmarked": 0,
+      "total": 0,
+      "by_cycle": {},
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00952127&recipient_committee_id=C00867093&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=H2MA08090"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/H2MA08090/"
+    },
+    {
+     "name": "Rasheed Nicholas Walters",
+     "party": "Independent",
+     "incumbent": false,
+     "fec_id": "H6MA08372",
+     "aipac_pac": {
+      "direct": 0,
+      "earmarked": 0,
+      "total": 0,
+      "by_cycle": {},
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00954909&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=H6MA08372"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/H6MA08372/"
+    }
+   ]
+  },
+  {
+   "office": "H",
+   "district": 9,
+   "title": "U.S. House, 9th District",
+   "candidates": [
+    {
+     "name": "Bill Keating",
+     "party": "Democratic",
+     "incumbent": true,
+     "fec_id": "H0MA10082",
+     "aipac_pac": {
+      "direct": 20000.0,
+      "earmarked": 47936.74,
+      "total": 67936.74,
+      "by_cycle": {
+       "2022": {
+        "direct": 10000.0,
+        "earmarked": 15700.0,
+        "count": 21
+       },
+       "2024": {
+        "direct": 10000.0,
+        "earmarked": 31813.93,
+        "count": 43
+       },
+       "2026": {
+        "direct": 0.0,
+        "earmarked": 422.81,
+        "count": 22
+       }
+      },
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00479063&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=H0MA10082"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/H0MA10082/"
+    },
+    {
+     "name": "R. Tyler MacAllister",
+     "party": "Republican",
+     "incumbent": false,
+     "fec_id": "H6MA09206",
+     "aipac_pac": {
+      "direct": 0,
+      "earmarked": 0,
+      "total": 0,
+      "by_cycle": {},
+      "source_url": "https://www.fec.gov/data/disbursements/?committee_id=C00797670&recipient_committee_id=C00910836&two_year_transaction_period=2022&two_year_transaction_period=2024&two_year_transaction_period=2026"
+     },
+     "super_pac": {
+      "support": 0.0,
+      "oppose": 0.0,
+      "source_url": "https://www.fec.gov/data/independent-expenditures/?committee_id=C00799031&candidate_id=H6MA09206"
+     },
+     "fec_url": "https://www.fec.gov/data/candidate/H6MA09206/"
+    }
+   ]
+  }
+ ]
+}

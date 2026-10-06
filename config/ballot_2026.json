@@ -1,0 +1,103 @@
+{
+  "_source": "Massachusetts Secretary of the Commonwealth, 2026 State Election Candidates: https://www.sec.state.ma.us/divisions/elections/research-and-statistics/2026-state-election-candidates.htm",
+  "_checked": "2026-10-06",
+  "_notes": [
+    "Party is the ballot designation as printed by the Secretary of the Commonwealth.",
+    "The official page lists Richard E. Neal with no designation; he won the Sept. 1, 2026 Democratic primary, so Democratic is used here.",
+    "fec_id is null when a candidate has no FEC registration (campaigns under $5,000 are not required to register)."
+  ],
+  "election_date": "2026-11-03",
+  "races": [
+    {
+      "office": "S",
+      "district": null,
+      "title": "U.S. Senate",
+      "candidates": [
+        { "name": "Edward J. Markey", "party": "Democratic", "fec_id": "S4MA00028", "incumbent": true },
+        { "name": "John Deaton", "party": "Republican", "fec_id": "S6MA00304" },
+        { "name": "Shiva Ayyadurai", "party": "Independent", "fec_id": "S8MA00268" },
+        { "name": "Joe Tache", "party": "Socialism and Liberation", "fec_id": "S6MA00288" }
+      ]
+    },
+    {
+      "office": "H",
+      "district": 1,
+      "title": "U.S. House, 1st District",
+      "candidates": [
+        { "name": "Richard E. Neal", "party": "Democratic", "fec_id": "H8MA02041", "incumbent": true },
+        { "name": "Nadia Donya Milleron", "party": "Independent/Unenrolled", "fec_id": "H4MA01091" }
+      ]
+    },
+    {
+      "office": "H",
+      "district": 2,
+      "title": "U.S. House, 2nd District",
+      "candidates": [
+        { "name": "James P. McGovern", "party": "Democratic", "fec_id": "H4MA03022", "incumbent": true }
+      ]
+    },
+    {
+      "office": "H",
+      "district": 3,
+      "title": "U.S. House, 3rd District",
+      "candidates": [
+        { "name": "Lori Loureiro Trahan", "party": "Democratic", "fec_id": "H8MA03106", "incumbent": true },
+        { "name": "Gary J. Grossi", "party": "Republican", "fec_id": "H6MA03100" },
+        { "name": "Dennis R. Conlon", "party": "Unenrolled", "fec_id": null }
+      ]
+    },
+    {
+      "office": "H",
+      "district": 4,
+      "title": "U.S. House, 4th District",
+      "candidates": [
+        { "name": "Jake Auchincloss", "party": "Democratic", "fec_id": "H0MA04192", "incumbent": true },
+        { "name": "Thomas Stalcup", "party": "Republican", "fec_id": "H6MA04140" }
+      ]
+    },
+    {
+      "office": "H",
+      "district": 5,
+      "title": "U.S. House, 5th District",
+      "candidates": [
+        { "name": "Katherine M. Clark", "party": "Democratic", "fec_id": "H4MA05084", "incumbent": true }
+      ]
+    },
+    {
+      "office": "H",
+      "district": 6,
+      "title": "U.S. House, 6th District",
+      "candidates": [
+        { "name": "Dan Koh", "party": "Democratic", "fec_id": "H8MA03072" },
+        { "name": "Micah Quinney Jones", "party": "Republican", "fec_id": "H6MA06202" }
+      ]
+    },
+    {
+      "office": "H",
+      "district": 7,
+      "title": "U.S. House, 7th District",
+      "candidates": [
+        { "name": "Ayanna S. Pressley", "party": "Democratic", "fec_id": "H8MA07032", "incumbent": true }
+      ]
+    },
+    {
+      "office": "H",
+      "district": 8,
+      "title": "U.S. House, 8th District",
+      "candidates": [
+        { "name": "Stephen F. Lynch", "party": "Democratic", "fec_id": "H2MA09072", "incumbent": true },
+        { "name": "Robert G. Burke", "party": "Republican", "fec_id": "H2MA08090" },
+        { "name": "Rasheed Nicholas Walters", "party": "Independent", "fec_id": "H6MA08372" }
+      ]
+    },
+    {
+      "office": "H",
+      "district": 9,
+      "title": "U.S. House, 9th District",
+      "candidates": [
+        { "name": "Bill Keating", "party": "Democratic", "fec_id": "H0MA10082", "incumbent": true },
+        { "name": "R. Tyler MacAllister", "party": "Republican", "fec_id": "H6MA09206" }
+      ]
+    }
+  ]
+}
