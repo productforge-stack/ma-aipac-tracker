@@ -1,5 +1,7 @@
 # New England Candidates & AIPAC Money
 
+Live at **https://aipacmoneytracker.org**
+
 A static website for the November 3, 2026 general election in Connecticut, Maine,
 Massachusetts, New Hampshire, Rhode Island and Vermont. A voter enters a ZIP code
 or street address and sees their U.S. Senate and U.S. House candidates with each
@@ -34,6 +36,12 @@ python scripts/build_data.py
 python -m http.server 8000 --directory site
 ```
 Then open http://localhost:8000.
+
+## Custom domain
+`aipacmoneytracker.org` is registered at Cloudflare (auto-renew on, WHOIS privacy on) and
+points at GitHub Pages: four `A` records to `185.199.108-111.153` and a `www` CNAME to
+`productforge-stack.github.io`, all **DNS only** (gray cloud). The domain is verified in the
+GitHub account's Pages settings, and set under the repo's Settings → Pages → Custom domain.
 
 ## Publish free on GitHub Pages
 1. Create a **public** GitHub repo and push this folder to its `main` branch.
