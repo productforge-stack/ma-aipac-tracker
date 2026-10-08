@@ -217,7 +217,7 @@ function countVisit() {
       const r = await fetch(`${base}/counter/TOTAL.json`);
       if (!r.ok) return;
       const { count } = await r.json();
-      $("visits").textContent = `${count} visitors so far`;
+      $("visits").textContent = `${count} ${count === "1" ? "visitor" : "visitors"} so far`;
       $("visits").hidden = false;
     } catch { /* counter is optional; never break the page over it */ }
   }, 1500);
