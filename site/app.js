@@ -129,7 +129,26 @@ function districtName(state, district) {
 }
 
 // pairs: [["MA", 7], ["MA", 5]] — one or more [state, district] the voter may be in.
-function showDistricts(pairs, how) {
+function shareBar(url) {
+  const btn = el("button", { type: "button", class: "share-btn" }, "Share these results");
+  btn.addEventListener("click", async () => {
+    const title = "Who on your ballot has taken AIPAC money?";
+    if (navigator.share) {
+      try { await navigator.share({ title, text: "Look up your 2026 candidates by ZIP code:", url }); } catch { /* user closed the share sheet */ }
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      btn.textContent = "Link copied";
+    } catch {
+      btn.textContent = url;  // last resort: show the link so it can be copied by hand
+    }
+    setTimeout(() => { btn.textContent = "Share these results"; }, 3000);
+  });
+  return el("div", { class: "share" }, btn);
+}
+
+function showDistricts(pairs, how, shareUrl) {
   const split = pairs.length > 1;
   const states = [...new Set(pairs.map(([st]) => st))];
   const out = [];
@@ -143,7 +162,7 @@ function showDistricts(pairs, how) {
       if (house) out.push(raceSection(house, split ? "Your ZIP code is split between districts. Use the address search above to confirm which one is yours." : null));
     }
   }
-  $("results").replaceChildren(...out);
+  $("results").replaceChildren(shareBar(shareUrl), ...out);
   setStatus(`${how} ${pairs.map(([st, d]) => districtName(st, d)).join(" and ")}.`);
   if (split) $("address-box").open = true;
 }
@@ -156,7 +175,7 @@ function lookupZip(zip) {
     $("address-box").open = true;
     return setStatus(`We couldn't match ${zip} to a congressional district (it may be a PO box or business ZIP). Try your street address instead.`, true);
   }
-  showDistricts(districts, districts.length > 1 ? `ZIP ${zip} covers parts of` : `ZIP ${zip} is in`);
+  showDistricts(districts, districts.length > 1 ? `ZIP ${zip} covers parts of` : `ZIP ${zip} is in`, `${location.origin}/?zip=${zip}`);
   history.replaceState(null, "", `?zip=${zip}`);
 }
 
@@ -199,7 +218,7 @@ async function lookupAddress(address) {
   const state = cd && STATE_FIPS[cd.STATE];
   if (!state) return setStatus(`That address (${match.matchedAddress}) isn't in New England.`, true);
   const cdKey = Object.keys(cd).find((k) => /^CD\d+$/.test(k));  // e.g. CD120: "07"; "00" = at-large
-  showDistricts([[state, parseInt(cd[cdKey], 10)]], `${match.matchedAddress} is in`);
+  showDistricts([[state, parseInt(cd[cdKey], 10)]], `${match.matchedAddress} is in`, `${location.origin}/`);  // never share the address
   history.replaceState(null, "", location.pathname);  // never keep the address in the URL
 }
 
