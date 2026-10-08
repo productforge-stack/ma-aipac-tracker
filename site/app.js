@@ -1,6 +1,8 @@
 "use strict";
 
 const GEOCODER = "https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress";
+// GoatCounter site code (the "MYCODE" in MYCODE.goatcounter.com). Empty = counter off.
+const GOATCOUNTER = "aipacmoneytracker";
 const STATE_FIPS = { "09": "CT", "23": "ME", "25": "MA", "33": "NH", "44": "RI", "50": "VT" };
 
 let data = null;   // candidates.json
@@ -201,6 +203,26 @@ async function lookupAddress(address) {
   history.replaceState(null, "", location.pathname);  // never keep the address in the URL
 }
 
+// Count this visit with GoatCounter (no cookies, no personal data), then show the site total.
+// Only the bare path "/" is sent, never the ZIP or address. Nothing is counted on local test copies.
+function countVisit() {
+  if (!GOATCOUNTER || location.protocol !== "https:") return;
+  const base = `https://${GOATCOUNTER}.goatcounter.com`;
+  const ref = document.referrer && !document.referrer.startsWith(location.origin) ? document.referrer : "";
+  const pixel = new Image();
+  pixel.src = `${base}/count?` + new URLSearchParams({ p: "/", t: document.title, r: ref, rnd: Math.random().toString(36).slice(2) });
+  // Give the hit a moment to register before reading the total.
+  setTimeout(async () => {
+    try {
+      const r = await fetch(`${base}/counter/TOTAL.json`);
+      if (!r.ok) return;
+      const { count } = await r.json();
+      $("visits").textContent = `${count} visitors so far`;
+      $("visits").hidden = false;
+    } catch { /* counter is optional; never break the page over it */ }
+  }, 1500);
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     await loadData();
@@ -209,6 +231,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
   $("zip-form").addEventListener("submit", (e) => { e.preventDefault(); lookupZip($("zip").value.trim()); });
   $("address-form").addEventListener("submit", (e) => { e.preventDefault(); lookupAddress($("address").value); });
+  countVisit();
   const zip = new URLSearchParams(location.search).get("zip");
   if (zip) { $("zip").value = zip; lookupZip(zip); }
 });

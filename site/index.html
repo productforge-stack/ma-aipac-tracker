@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://geocoding.geo.census.gov; connect-src 'self'; img-src 'self' data:; style-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://geocoding.geo.census.gov; connect-src 'self' https://aipacmoneytracker.goatcounter.com; img-src 'self' data: https://aipacmoneytracker.goatcounter.com; style-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <title>New England AIPAC Money</title>
 <meta name="description" content="Look up your 2026 New England congressional and Senate candidates and see which have received money from AIPAC's PAC, based on FEC filings.">
@@ -62,6 +62,7 @@
 
 <footer class="wrap fine">
   Independent project, not affiliated with any candidate, party or committee. Data: Federal Election Commission, U.S. Census Bureau, and the six states' election offices.
+  <p id="visits" class="visits" hidden></p>
 </footer>
 </body>
 </html>
